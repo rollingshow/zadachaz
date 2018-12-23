@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{ 
+	setlocale(LC_ALL, "Russian");
+	int r, a, b, c, d, maxa = 0, maxb = 0;
+	cout << "Введите значения r, a, b, c, d" << endl;
+	cin >> r >> a >> b >> c >> d;
+	maxa = a>b ? a : b;
+	maxb = c>d ? c : d;
+	if (sqrt(maxa*maxa + maxb * maxb) <= 2 * r) {
+		cout << "Можно вырезать" << endl;
+	}
+	else {
+		cout << "Нельзя" << endl;
+	}
+	return 0;
+}
